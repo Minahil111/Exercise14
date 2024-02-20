@@ -13,9 +13,11 @@ point = 1+0
 for attempts in range (1,4):
 
     user_input = input('choose an option')
+    print(type(user_input))
     computer = random.choice(the_game)
     print(computer)
     draw = user_input == computer
+    print(type(draw))
     # rock=paper
     # while attempts < max_attempts:
     remaining_attempts = int(max_attempts) - (int(attempts) + int(draw))

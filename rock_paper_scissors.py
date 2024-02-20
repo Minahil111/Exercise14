@@ -15,6 +15,7 @@ def convert_input(choice):
         return 'Scissors'
     elif choice not in ['R', 'P', 'S']:
         print('\nInvalid choice. Please try again.')
+
     # how to stop code from running further?
 
 
@@ -43,8 +44,8 @@ def play_game():
     user_input = input("Make your choice! \nEnter R for Rock, P for Paper, or S for Scissors: ").upper()
 
     user_choice = convert_input(user_input)
-    # for computer choice use random.randint to choose random integer in given rang
-    # range is inclusive
+    # for computer choice use random.randint to choose random integer in given range
+    # the range is inclusive
     computer_choice_number = random.randint(0, 2)
     choice_list = ['Rock', 'Paper', 'Scissors']
     # use [] to index the list of choices and return the choice that assigns with the computer's number choice
@@ -55,4 +56,6 @@ def play_game():
 
 
 # run the game
-play_game()
+if __name__ == '__main__':
+    play_game()
+
